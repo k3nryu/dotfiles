@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -16,6 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
+#ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -45,19 +47,19 @@ export ZSH="$HOME/.oh-my-zsh"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_TITLE="true"
-# To display Hostname💻jPWD_Name as title text
+
+# To display Hostname😎PWD_Name as title text
 HOSTNAME=$(hostname -s)
 # Let zsh launch with the custom title.
-window_title="\033]0;$HOSTNAME💻${PWD##*/}\007"
+window_title="\033]0;$HOSTNAME😎${PWD##*/}\007"
 echo -ne "$window_title"
-# Refresh the custome title when the directory changes. Changed from precmd as it shall suppress the set-title function below
+# Refresh the custom title when the directory changes. Changed from precmd as it shall suppress the set-title function below
 function chpwd () {
-  window_title="\033]0;$HOSTNAME💻${PWD##*/}\007"
+  window_title="\033]0;$HOSTNAME😎${PWD##*/}\007"
   echo -ne "$window_title"
 }
-# Setting your own title text on demand. (Don't change dir after setting it 💻)
+# Setting your own title text on demand. (Don't change dir after setting it 😎)
 function set-title(){
   TITLE="\[\e]2;$*\a\]"
   echo -e ${TITLE}
@@ -98,6 +100,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -129,8 +132,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -139,4 +141,3 @@ source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
