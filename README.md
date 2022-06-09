@@ -1,1 +1,1 @@
-# dotfiles for Windows WSL(Ubuntu)
+# dotfiles for macOS
