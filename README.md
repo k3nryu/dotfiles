@@ -1,30 +1,15 @@
-# Dotfiles for Linux
-## Dependencies
-- Zsh
-- Git
-- Util-linux-user
-- Oh-my-zsh(zsh manager)
-- Powerlevel10k(zsh theme)
-- zsh-syntax-highlighting
-- zsh-autosuggestions
+# dotfiles for Windows WSL(Ubuntu)
 
-## Installation
-#### Step1: Clone repositories to local.
-```bash
-git clone --recursive -b Linux https://github.com/k3nryu/dotfiles.git
-```
-#### Step2: Execute 'install.sh' shell script.
-```bash
-docfiles/install.sh
-```
+## alacritty
+### MesloLGS NF (Font for powerlevel10k theme)
 
-## Update
-```bash
+## zsh
 
-```
+### oh-my-zsh (zsh configuration manager)
+https://github.com/ohmyzsh/ohmyzsh
 
-## Uninstall
-```bash
-rm -rf ~/dotfiles
-rm -rf ~/.oh-my-zsh
-```
+
+### Powerlevel10k (zsh theme)
+https://github.com/romkatv/powerlevel10k
+
+
