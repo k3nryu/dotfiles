@@ -4,9 +4,9 @@
 zsh_bins=`grep 'zsh' /etc/shells | wc -l`
 if [ $zsh_bins == 0 ];
 then
-	sudo dnf -y install zsh
+	sudo apt-get -y install zsh
 fi
-sudo dnf -y install util-linux-user
+sudo apt-get -y install util-linux-user
 
 ## Install zsh plugins
 ### p10k theme
