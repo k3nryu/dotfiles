@@ -25,7 +25,8 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -sf ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ln -sf ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
-#ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.auto-change-iterm-profile.sh ~/.auto-change-iterm-profile.sh
+ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
 
 chsh -s $(which zsh)
 exec zsh
