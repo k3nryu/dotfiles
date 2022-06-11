@@ -4,9 +4,9 @@
 zsh_bins=`grep 'zsh' /etc/shells | wc -l`
 if [ $zsh_bins == 0 ];
 then
-	sudo brew -y install zsh
+	brew install zsh
 fi
-sudo brew -y install tmux
+brew install tmux
 
 cd 
 
@@ -21,11 +21,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/gpakosz/.tmux.git
 
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.oh-my-zsh ~/.oh-my-zsh
+#ln -sf ~/dotfiles/.oh-my-zsh ~/.oh-my-zsh
 ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -sf ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
-ln -sf ~/.dotfiles/.alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+#ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
 
 chsh -s $(which zsh)
 exec zsh
