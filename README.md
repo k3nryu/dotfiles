@@ -13,7 +13,7 @@
 ## Installation
 #### Step1: Clone repositories to local.
 ```bash
-git clone --recursive -b Linux https://github.com/k3nryu/dotfiles.git
+git clone --recursive -b Windows_WSL git@github.com:k3nryu/dotfiles.git
 ```
 #### Step2: Execute 'install.sh' shell script.
 ```bash
