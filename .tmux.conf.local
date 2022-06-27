@@ -347,6 +347,13 @@ bind C-b send-prefix
 # move status line to top
 set -g status-position top
 
+# window navigation
+unbind n
+unbind p
+bind -r C-j previous-window # select previous window
+bind -r C-k next-window     # select next window
+bind Tab last-window        # move to last active window
+
 
 # -- tpm -----------------------------------------------------------------------
 
