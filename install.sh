@@ -6,7 +6,9 @@ if [ $zsh_bins == 0 ];
 then
 	sudo dnf -y install zsh
 fi
-sudo dnf -y install util-linux-user
+sudo dnf -y install util-linux-user tmux hostname
+
+cd
 
 ## Install zsh plugins
 ### p10k theme
@@ -15,11 +17,16 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ### auto suggest
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+### tmux
+git clone https://github.com/gpakosz/.tmux.git
 
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.oh-my-zsh ~/.oh-my-zsh
 ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -sf ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
+ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
 
 chsh -s $(which zsh)
 exec zsh
 echo $SHELL
+
